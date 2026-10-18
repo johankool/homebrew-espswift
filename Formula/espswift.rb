@@ -13,9 +13,11 @@ class Espswift < Formula
   head "https://github.com/johankool/espswift.git", branch: "main"
 
   # ESP-IDF needs CMake and the Python that espswift pins (ESP-IDF 6.1
-  # doesn't support Homebrew's newer default Python); EIM installs ESP-IDF.
+  # doesn't support Homebrew's newer default Python). EIM, which installs
+  # ESP-IDF, isn't a dependency: its formula has no bottles, so espswift's
+  # couldn't have one. Install it next to espswift (see the caveats);
+  # espswift setup says so if it's missing.
   depends_on "cmake"
-  depends_on "espressif/eim/eim"
   depends_on "python@3.14"
 
   on_macos do
@@ -32,7 +34,12 @@ class Espswift < Formula
 
   def caveats
     <<~EOS
-      To install ESP-IDF, the Swift toolchain and the Xcode template, run:
+      espswift setup installs ESP-IDF with Espressif's EIM. If you don't
+      have EIM yet, install it first:
+        brew tap espressif/eim
+        brew trust --formula espressif/eim/eim
+        brew install espressif/eim/eim
+      Then, to install ESP-IDF, the Swift toolchain and the Xcode template, run:
         espswift setup
       Then check everything is in order with:
         espswift doctor
