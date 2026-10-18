@@ -12,6 +12,11 @@ class Espswift < Formula
   license "MIT"
   head "https://github.com/johankool/espswift.git", branch: "main"
 
+  bottle do
+    root_url "https://github.com/johankool/homebrew-espswift/releases/download/espswift-0.2.2"
+    sha256 arm64_tahoe: "dcb39e4ac644a694b3bd801d36d934bc17064f341f28abcb8ad032a0a260d85c"
+  end
+
   # ESP-IDF needs CMake and the Python that espswift pins (ESP-IDF 6.1
   # doesn't support Homebrew's newer default Python). EIM, which installs
   # ESP-IDF, isn't a dependency: its formula has no bottles, so espswift's
