@@ -47,8 +47,11 @@ class Espswift < Formula
   end
 
   test do
-    # Creating a project needs the template from share/espswift.
-    system bin/"espswift", "new", "Blinky", "--folder", testpath
+    # Creating a project needs the template from share/espswift. With the
+    # board and the example given, espswift doesn't ask for them.
+    system bin/"espswift", "new", "Blinky", "--board", "esp32-c6-devkitc-1", "--example", "blink",
+           "--folder", testpath
     assert_path_exists testpath/"Blinky/Blinky/sdkconfig.defaults"
+    assert_match "esp32c6", (testpath/"Blinky/Blinky/sdkconfig.defaults").read
   end
 end
