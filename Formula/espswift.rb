@@ -1,11 +1,14 @@
 # espswift: Embedded Swift for RISC-V based ESP32 chips.
 #
-# Until there are releases, this builds espswift from the repository's main
-# branch: brew install --HEAD espswift. espswift setup then installs ESP-IDF
-# (with Espressif's EIM), the Swift toolchain and the Xcode template.
+# Installs espswift and its Xcode template; espswift setup then installs
+# ESP-IDF (with Espressif's EIM) and the Swift toolchain. On macOS
+# (Apple Silicon) it's a bottle; brew install --HEAD espswift builds the
+# main branch.
 class Espswift < Formula
   desc "Embedded Swift for RISC-V ESP32 chips: create, build, flash, monitor and debug"
   homepage "https://github.com/johankool/espswift"
+  url "https://github.com/johankool/espswift/archive/refs/tags/v0.2.0.tar.gz"
+  sha256 "aa0049d1d222d89b3bf05e042a511bbede23b2dca875ab89898a8fdfa22e86bb"
   license "MIT"
   head "https://github.com/johankool/espswift.git", branch: "main"
 
