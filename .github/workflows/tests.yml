@@ -45,8 +45,9 @@ jobs:
       - run: brew test-bot --only-setup
 
       - run: brew test-bot --only-tap-syntax
-      # After test-bot's cleanup, which removes other taps. Homebrew asks to trust taps other than its own: espswift needs
-      # Espressif's EIM, from espressif/eim, and comes from this tap.
+      # After test-bot's cleanup, which removes other taps. Homebrew asks
+      # to trust taps other than its own: espswift needs Espressif's EIM,
+      # from espressif/eim, and comes from this tap.
       - name: Tap and trust the taps
         run: |
           brew tap espressif/eim
