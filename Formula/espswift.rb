@@ -7,15 +7,11 @@
 class Espswift < Formula
   desc "Embedded Swift for RISC-V ESP32 chips: create, build, flash, monitor and debug"
   homepage "https://github.com/johankool/espswift"
-  url "https://github.com/johankool/espswift/archive/refs/tags/v0.2.1.tar.gz"
-  sha256 "f3a5749616c02839b2b8bed9428bb50dc36b53577d02f52cafc55bed68defe77"
+  url "https://github.com/johankool/espswift/archive/refs/tags/v0.2.2.tar.gz"
+  sha256 "387bb12b1c1b1cb3cdd443bfca5af4c13db8a469903e06820ec4d649cb0ff963"
   license "MIT"
   head "https://github.com/johankool/espswift.git", branch: "main"
 
-  bottle do
-    root_url "https://github.com/johankool/homebrew-espswift/releases/download/espswift-0.2.1"
-    sha256 arm64_tahoe: "22f1d7de2044a39c5fb0baeb96822822be1a01651b16b9ada98b04260445815b"
-  end
 
   # ESP-IDF needs CMake and the Python that espswift pins (ESP-IDF 6.1
   # doesn't support Homebrew's newer default Python). EIM, which installs
