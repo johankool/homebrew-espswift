@@ -12,7 +12,6 @@ class Espswift < Formula
   license "MIT"
   head "https://github.com/johankool/espswift.git", branch: "main"
 
-
   # ESP-IDF needs CMake and the Python that espswift pins (ESP-IDF 6.1
   # doesn't support Homebrew's newer default Python). EIM, which installs
   # ESP-IDF, isn't a dependency: its formula has no bottles, so espswift's
