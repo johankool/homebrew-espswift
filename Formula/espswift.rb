@@ -7,8 +7,8 @@
 class Espswift < Formula
   desc "Embedded Swift for RISC-V ESP32 chips: create, build, flash, monitor and debug"
   homepage "https://github.com/johankool/espswift"
-  url "https://github.com/johankool/espswift/archive/refs/tags/v0.2.0.tar.gz"
-  sha256 "aa0049d1d222d89b3bf05e042a511bbede23b2dca875ab89898a8fdfa22e86bb"
+  url "https://github.com/johankool/espswift/archive/refs/tags/v0.2.1.tar.gz"
+  sha256 "f3a5749616c02839b2b8bed9428bb50dc36b53577d02f52cafc55bed68defe77"
   license "MIT"
   head "https://github.com/johankool/espswift.git", branch: "main"
 
